@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fce4ec;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #d81b60;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: #d81b60;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #ad1457;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #response {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be Mine?</h1>
+        <p class="message">Click the button below to see the magic!</p>
+        <button id="proposeBtn">Propose</button>
+        <p id="response" class="hidden"></p>
+    </div>
+
+    <script>
+        document.getElementById("proposeBtn").addEventListener("click", function() {
+            const responseElement = document.getElementById("response");
+            responseElement.classList.remove("hidden");
+            responseElement.textContent = "Yes, I will! ❤️";
+        });
+    </script>
+</body>
+</html>
